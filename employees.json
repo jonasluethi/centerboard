@@ -1,0 +1,12 @@
+[
+  {
+    "id": "seed-1",
+    "name": "Mitarbeiter A",
+    "address": "Schulstrasse 8, 4142 Münchenstein"
+  },
+  {
+    "id": "seed-2",
+    "name": "Mitarbeiter B",
+    "address": "Ilfisgraben 97, 3550 Langnau"
+  }
+]

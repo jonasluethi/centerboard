@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitarbeiter-Standorte · Centerboard</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <header class="sidebar-header">
+        <h1>Mitarbeiter-Standorte</h1>
+        <p class="subtitle">Kartenmaterial von swisstopo</p>
+      </header>
+
+      <section class="layer-switch">
+        <label><input type="radio" name="layer" value="pixelkarte-farbe" checked> Landeskarte (farbig)</label>
+        <label><input type="radio" name="layer" value="pixelkarte-grau"> Landeskarte (grau)</label>
+        <label><input type="radio" name="layer" value="swissimage"> Luftbild</label>
+      </section>
+
+      <section class="employee-list-section">
+        <h2>Mitarbeitende <span id="employee-count" class="count"></span></h2>
+        <ul id="employee-list"></ul>
+      </section>
+
+      <section class="add-employee">
+        <h2>Mitarbeiter hinzufügen</h2>
+        <form id="add-form">
+          <input type="text" id="input-name" placeholder="Name" required>
+          <input type="text" id="input-address" placeholder="Adresse, z.B. Strasse 1, 8000 Zürich" required>
+          <button type="submit">Hinzufügen &amp; einzeichnen</button>
+          <p id="form-status" class="form-status"></p>
+        </form>
+        <button id="reset-btn" class="reset-btn" type="button">Auf Standardliste zurücksetzen</button>
+      </section>
+    </aside>
+
+    <main id="map"></main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
